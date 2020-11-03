@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <ImageView
+          android:layout_below="@id/tv_rcytitle"
+          android:layout_alignParentRight="true"
+          android:layout_width="35dp"
+          android:layout_height="35dp"
+          android:src="@drawable/xin"
+          android:id="@+id/im_item"/>
+
+        <TextView
+            android:id="@+id/tv_rcyname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_rcy"
+            android:text="@{ShouyeBean.superChapterName}" />
+
+        <TextView
+            android:id="@+id/tv_rcy1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_rcytime"
+            android:text="时间    " />
+
+        <TextView
+            android:id="@+id/tv_rcytime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@{ShouyeBean.niceShareDate}" />
+
+        <TextView
+            android:id="@+id/tv_rcytitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rcy"
+            android:text="@{ShouyeBean.title}" />
+
+        <TextView
+            android:id="@+id/tv_shijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rcytitle"
+            android:text="作者   " />
+
+        <TextView
+
+            android:id="@+id/tv_rcygong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rcytitle"
+            android:layout_toRightOf="@id/tv_shijian"
+            android:text="@{ShouyeBean.author}" />
+
+        <TextView
+            android:id="@+id/tv_rcy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="类别   " />
+
+
+    </RelativeLayout>
+
+    <data>
+
+    <variable
+        name="ShouyeBean"
+        type="com.zyy.wanandroidmvvm.bean.ShouYeBean.DataBean.DatasBean" />
+</data>
+</layout>

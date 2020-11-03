@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+<variable
+    name="XiangBean"
+    type="com.zyy.wanandroidmvvm.bean.XiangBean.DataBean.DatasBean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_rcy1"
+            android:text="@{XiangBean.author}"/>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_rcy2"
+            android:text="@{XiangBean.niceShareDate}"/>
+
+        <ImageView
+            android:layout_below="@id/tv_rcy1"
+            android:id="@+id/iv_img"
+            app:imag="@{XiangBean.envelopePic}"
+            android:layout_width="100dp"
+            android:layout_height="200dp" />
+
+      <TextView
+          android:layout_below="@id/tv_rcy1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/tv_rcy3"
+          android:layout_toRightOf="@id/iv_img"
+          android:text="@{XiangBean.desc}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_rcy4"
+            android:layout_below="@id/tv_rcy3"
+            android:text="@{XiangBean.title}"
+            android:layout_toRightOf="@id/iv_img"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_rcy5"
+            android:layout_below="@id/iv_img"
+            android:text="@{XiangBean.superChapterName}"/>
+<ImageView
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:src="@drawable/xin"
+    android:layout_below="@id/iv_img"
+    android:layout_alignParentRight="true"
+    android:id="@+id/im"/>
+
+
+
+    </RelativeLayout>
+</layout>
